@@ -3,7 +3,7 @@ var myObstacles = [];
 
 function startGame() {
     /*myGamePiece = new component(30, 30, "red", 10, 120);*/
-    myGamePiece = new component(30, 30, "sail-boat.gif", 10, 120, "image");
+    myGamePiece = new component(50, 50, "sail-boat.gif", 10, 120, "image");
     myGameArea.start();
 }
 
@@ -90,7 +90,7 @@ function updateGameArea() {
         minGap = 50;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(10, height, "green", x, 0));
+        myObstacles.push(new component(10, height, "blue", x, 0));
         myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
     }
     for (i = 0; i < myObstacles.length; i += 1) {
@@ -106,23 +106,15 @@ function everyinterval(n) {
     return false;
 }
 
-function moveup() {
-    myGamePiece.speedY = -1; 
+function move(button) {
+    myGamePiece.image.src = "sail-boat.gif";
+    if (button == "up") {myGamePiece.speedY = -1; }
+    if (button == "down") {myGamePiece.speedY = 1; }
+    if (button == "left") {myGamePiece.speedX = -1; }
+    if (button == "right") {myGamePiece.speedX = 1; }
 }
-
-function movedown() {
-    myGamePiece.speedY = 1; 
-}
-
-function moveleft() {
-    myGamePiece.speedX = -1; 
-}
-
-function moveright() {
-    myGamePiece.speedX = 1; 
-}
-
 function clearmove() {
+    myGamePiece.image.src = "sail-boat.gif";
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
 }
