@@ -1,5 +1,45 @@
+html{
+	background: url("background.gif")no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+div{
+	text-align: center;
+}
+button {
+    background-color: #555555; /* Black */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button:disabled{
+	background: :white;
+	color: #555555;
+	display: none;
+}
+button:hover{
+	background: white;
+	color: #555555;
+}
+.info{
+	color: white;
+}
+#score{
+	color:red;
+}
+#high{
+	color:red;
+}
 canvas {
     border:1px solid #d3d3d3;
     /*background-color: #f1f1f1;*/
     background-image: url('the_ocean.gif');
 }
+

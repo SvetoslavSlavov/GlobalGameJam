@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="Code.js"></script>
+<script src="bakedGoods.js"></script> <!-- biblioekata.. -->
+<body onLoad="myGameArea.stop()"id="body">
+<div style="text-align:center;/*width:480px;*/">
+
+  <button onMouseDown="move('up')" onMouseUp="clearmove()" ontouchstart="moveup()" id="up_button">UP</button><br><br>
+  <!-- <button onMouseDown="moveleft()" onMouseUp="clearmove()" ontouchstart="moveleft()" disabled>LEFT</button>
+  <button onMouseDown="moveright()" onMouseUp="clearmove()" ontouchstart="moveright()" disabled>RIGHT</button><br><br> -->
+  <button onMouseDown="move('down')" onMouseUp="clearmove()" ontouchstart="movedown()" id="down_button">DOWN</button><br></br>
+  <button type="button" onClick="startGame();" id="start_button">START</button><br></br>
+  <button type="button" onClick="gameover()" id="reset_button">RESET</button><br></br>
+
+  <p class="info">Passed Objects:</p><p id="score"></p>
+  <p class="info">Highest Score :</p><p id="high"></p>
+  
+  <img src="logo.jpg" alt="No Image Found" id="startup_logo">
+</div>
+</body>
+</html>
